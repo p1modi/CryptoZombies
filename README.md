@@ -170,6 +170,25 @@ Typecasting refers to changing the type of any value. For example, from a uint t
           
           
          
+13) Events
+
+An event in the Solidity code basically sends a singal to the front-end, which is listening for such events. Syntax:
+
+          event IntegersAdded(uint x, uint y, uint result); [name of the event + what data-types are attached to it].
+          
+          followed by
+          
+          emit IntegersAdded(a, b, c); [event occurs + specific data-variables to be emitted when the event occurs]
+          
+Full example:
+          
+          event IntegersAdded(uint x, uint y, uint result);
+          function add(uint _x, uint _y) public returns (uint) {
+          uint result = _x + _y;
+          emit IntegersAdded(_x, _y, result);
+          return result;
+}
+
 
 
 
