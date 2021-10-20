@@ -68,11 +68,28 @@ An array of structs can be be created by replacing the variable-type with the st
            funcName("PM", 25);
            
 
+When a fucntion iterates on a data-type, it is known as 'passing' that data-type.
+
+Based on the data-type in consideration, the function either passes 'by value' or 'by reference'.
+
 Pass by value vs Pass by reference
 
           In reference to uint x = 42, 'passed by value' means that when x is called
           to a function and 'passed', the function picks up the value stored in x,
           without impacting x itself.
           
+          In reference to uint[] a = [0,1]; 'passed by reference' means that when a
+          is called to a function and 'passed', the function iterates by making a
+          reference to the array 'a' and the iterations impact that array.
+          
+Some data-types are Value Types (always passed by value) while others are Reference Types (always passed by reference).
+
+          Value Types: booleans, integers, fixed point numbers, address,
+          contract types, fixed-size byte arrays, dynamically-sized byte arrays,
+          Address Literals, Rational and Integer Literals, String Literals and Types,
+          Unicode Literals, Hexadecimal Literals, Enums, Function Types
+          
+          
+          Reference Types: Data location, arrays, array slices, structs.
 
   
