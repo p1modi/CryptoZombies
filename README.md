@@ -34,7 +34,7 @@ Learning solidity on cryptozombies.io
            }
            
            
-6) Solidity has two types of arrays: fixed arrays and dynamic arrays.
+6 & 8) Solidity has two types of arrays: fixed arrays and dynamic arrays.
 
       Fixed arrays have a specified length.
 
@@ -55,7 +55,28 @@ An array of structs can be be created by replacing the variable-type with the st
 
            Syntax: structName[] public arrayName;
            
-           
+
+An entry can be added to the end of an array by using the following command:
+
+          arrayName.push(//contents that go into the array//);
+          
+Example of an array of structs, with the push command:
+
+          struct phone {
+                    string phoneName;
+                    uint modelNumber;
+                    }
+                    
+          phone[] public arrayOfPhones;
+          
+          phone ABC = phone("iPhone", 8);
+          
+          arrayOfPhones.push(ABC);
+          
+          OR
+          
+          arrayOfPhones.push(phone("iPhone", 8);
+
 
 7) Functions have the following syntax:
 
@@ -90,10 +111,23 @@ Some data-types are Value Types (always passed by value) while others are Refere
 
           Value Types: booleans, integers, fixed point numbers, address,
           contract types, fixed-size byte arrays, dynamically-sized byte arrays,
-          Address Literals, Rational and Integer Literals, String Literals and Types,
-          Unicode Literals, Hexadecimal Literals, Enums, Function Types
+          Address Literals, Rational and Integer Literals, String Literals and
+          Types, Unicode Literals, Hexadecimal Literals, Enums, Function Types
           
           
           Reference Types: Data location, arrays, array slices, structs.
 
   
+9) Functions can be public or private. 
+          
+          Public functions can be called by anyone or any other contract. 
+          This means that any other contract will be able to execute the code in
+          that public function. 
+          
+          Private functoins can only be called by other functions within the
+          same contract. 
+
+It is also conventional to name private functions by using an underscore before their name.
+
+
+10) 
