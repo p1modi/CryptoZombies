@@ -1,0 +1,18 @@
+//This code does two parts of what Lesson 1 requires: 
+//(1) it takes a string input from the user and creates a random number based on it; 
+//(2) it returns that string, along with a random 9-digit mobile number generated from that string.
+
+pragma solidity >=0.5.0 <0.6.0;
+contract ZombieParty {
+
+  
+  function nameYourZombie (string memory _zombieName) public pure returns (string memory, uint) {
+
+    uint rand = uint(keccak256(abi.encodePacked(_zombieName)));
+    
+    uint mobNum = rand % (10 ** 9);
+    
+    return (_zombieName, mobNum);
+    }
+    
+}
