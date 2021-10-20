@@ -148,3 +148,11 @@ Functions can also be of a 'view' or 'pure' type. View functions only view data,
           function _multiply(uint a, uint b) private pure returns (uint){
           return a*b;
           }
+
+11) Packing and Randomizing on ethereum.
+
+Packing refers to convering an input into its corresponding byte form.
+
+
+
+The function keccak256 maps an input to a random 256-bit hexadecimal number.
