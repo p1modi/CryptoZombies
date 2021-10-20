@@ -130,4 +130,21 @@ Some data-types are Value Types (always passed by value) while others are Refere
 It is also conventional to name private functions by using an underscore before their name.
 
 
-10) 
+10) Some functions return a value. The type of the value that will be returned must also be mentioned. In order to declare a function in a manner that it returns a value, use the following syntax:
+
+          string GM = "gm fam";
+          
+          function sayGM() public returns (string memory) {
+          return GM;
+          }
+
+
+Functions can also be of a 'view' or 'pure' type. View functions only view data, without changing the state in Solidity. Pure functions dont even view data.
+
+          Syntax for view:
+          function sayGM() public view returns (string memory)
+          
+          Syntax for pure:
+          function _multiply(uint a, uint b) private pure returns (uint){
+          return a*b;
+          }
