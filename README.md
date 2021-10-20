@@ -67,6 +67,10 @@ An array of structs can be be created by replacing the variable-type with the st
 
            funcName("PM", 25);
            
+Function parameters are conventionally named using an underscore that precedes the name ('_ name'). This is to distinguish them as variables that operate within the function. Global variables - whcih operate in the entire contract - do not get underscores before them.
+
+
+'memory' indicates that the '_ name' variable should be sotred in memory as opposed to storage. All reference types are required to be stored in memory, and require the 'memory' syntax to be used.
 
 When a fucntion iterates on a data-type, it is known as 'passing' that data-type.
 
@@ -78,9 +82,9 @@ Pass by value vs Pass by reference
           to a function and 'passed', the function picks up the value stored in x,
           without impacting x itself.
           
-          In reference to uint[] a = [0,1]; 'passed by reference' means that when a
+          In reference to uint[] x = [0,1]; 'passed by reference' means that when x
           is called to a function and 'passed', the function iterates by making a
-          reference to the array 'a' and the iterations impact that array.
+          reference to the array x and the iterations impact that array.
           
 Some data-types are Value Types (always passed by value) while others are Reference Types (always passed by reference).
 
