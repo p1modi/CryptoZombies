@@ -56,6 +56,23 @@ An array of structs can be be created by replacing the variable-type with the st
            Syntax: structName[] public arrayName;
            
            
- 
+
+7) Functions have the following syntax:
+
+           function funcName(string memory _name, uint _amount) public {
+           
+           }
+           
+'string' and 'uint' are the parameters that the function takes. This means, when the function is called it will also be assigned a string value and a uint value, that the function will process. This is how a function is called:
+
+           funcName("PM", 25);
+           
+
+Pass by value vs Pass by reference
+
+          In reference to uint x = 42, 'passed by value' means that when x is called
+          to a function and 'passed', the function picks up the value stored in x,
+          without impacting x itself.
+          
 
   
