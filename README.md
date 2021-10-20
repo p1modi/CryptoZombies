@@ -149,10 +149,27 @@ Functions can also be of a 'view' or 'pure' type. View functions only view data,
           return a*b;
           }
 
-11) Packing and Randomizing on ethereum.
+11) Packing and Randomizing on ethereum. Also Typecasting.
 
-Packing refers to convering an input into its corresponding byte form.
+Packing refers to convering an input into its corresponding byte form. The following syntax 'packs' an input:
+
+          abi.encodePacked(//input//); [this will result in a byte-type]
+
+The function keccak256 maps a byte-type input to a random 256-bit hexadecimal number. The following syntax is used:
+          
+          uint random = uint(keccak256(abi.encodePacked(//input//)));
+          
+          
+Typecasting refers to changing the type of any value. For example, from a uint to a uint8. The following syntax is used:
+
+          uint a = 5;
+          uint8 b = 10;
+          
+          uint8 c = a*b; [this will give an error because uint a is not a uint8 type]
+          uint8 c = uint8(a) * b;[this will give no errors, because uint a has been typecast as a uint8 before computation].
+          
+          
+         
 
 
 
-The function keccak256 maps an input to a random 256-bit hexadecimal number.
