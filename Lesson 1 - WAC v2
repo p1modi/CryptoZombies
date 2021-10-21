@@ -1,0 +1,25 @@
+//Building on the last code, this code does not return the Zombie's name and number. 
+//Instead, it stores both values in a public array, that can be called and viewed by the user.
+
+//SPDX-License-Identifier: UNLICENSED
+
+pragma solidity ^0.8.0;
+contract ZombieParty {
+    
+    struct zombie {
+        string zombieName;
+        uint zombieNum;
+    }
+    
+    zombie[] public zombieLedger;
+    
+    function nameYourZombie (string memory _zombieName) public {
+        
+        uint rand = uint(keccak256(abi.encodePacked(_zombieName)));
+        uint _zombieNum = rand % (10 ** 9);
+        
+        zombieLedger.push(zombie(_zombieName,_zombieNum));
+    }
+    
+    
+}
