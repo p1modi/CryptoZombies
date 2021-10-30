@@ -19,6 +19,6 @@ This is a 'universal variable available to all functions' in Solidity. Essential
 
           Example of using mappings with msg.sender:
           
-         mapping (string => address) nameToAddress;
+         mapping (string => address) public nameToAddress;
          nameToAddress["Pranay"] = msg.sender;
          
