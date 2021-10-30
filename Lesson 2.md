@@ -15,6 +15,8 @@ Step 2: Assign value to the mapping by using [] for the key and = for the value.
 
 This is a 'universal variable available to all functions' in Solidity. Essentially, it represents the address of the contract that calls the function where the msg.sender variable is located.
 
+//the stuff below is not correct//
+
           Syntax: [use msg.sender in place of variables].
 
           Example of using mappings with msg.sender:
