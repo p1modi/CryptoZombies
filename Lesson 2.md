@@ -8,4 +8,6 @@ Lesson 2
 
 2) msg.sender 
 
-This is a 'universal variable available to all functions' in Solidity. Essentially, it represents the address of the contract that calls the function 
+This is a 'universal variable available to all functions' in Solidity. Essentially, it represents the address of the contract that calls the function where the msg.sender variable is located.
+
+          Syntax: [use msg.sender in place of variables].
