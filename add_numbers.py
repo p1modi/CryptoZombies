@@ -1,7 +1,7 @@
-# Simple script to add 10 and 12 and print the result
+"""Simple script to add 12 and 14 and print the result."""
 
 def main():
-    result = 10 + 12
+    result = 12 + 14
     print(result)
 
 
